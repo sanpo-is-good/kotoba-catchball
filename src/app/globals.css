@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f0a1e;
+  --surface: #1a1333;
+  --surface2: #231a45;
+  --accent: #7C3AED;
+  --accent2: #a855f7;
+  --gold: #F59E0B;
+  --text: #f0e6ff;
+  --text-sub: #a09ab8;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Safe area for iPhone notch */
+.safe-top { padding-top: env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+/* Chat bubbles */
+.bubble-mine {
+  background: linear-gradient(135deg, #7C3AED, #9333ea);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+  padding: 10px 14px;
+  max-width: 75%;
+  word-break: break-word;
+  font-size: 15px;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+}
+
+.bubble-theirs {
+  background: var(--surface2);
+  color: var(--text);
+  border-radius: 18px 18px 18px 4px;
+  padding: 10px 14px;
+  max-width: 75%;
+  word-break: break-word;
+  font-size: 15px;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 4px; }
+
+/* Result screen LINE-style bubbles */
+.result-bubble-mine {
+  background: linear-gradient(135deg, #7C3AED, #9333ea);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+  padding: 10px 14px;
+  max-width: 72%;
+  word-break: break-word;
+  font-size: 15px;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+}
+
+.result-bubble-theirs {
+  background: #231a45;
+  color: #f0e6ff;
+  border-radius: 18px 18px 18px 4px;
+  padding: 10px 14px;
+  max-width: 72%;
+  word-break: break-word;
+  font-size: 15px;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  border: 1px solid rgba(124,58,237,0.15);
+}
+
+/* Game field background gradient */
+.game-field {
+  background: linear-gradient(180deg, #87CEEB 0%, #98D8A0 60%, #7BC47F 100%);
+}
